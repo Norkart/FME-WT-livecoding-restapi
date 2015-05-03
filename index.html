@@ -2,96 +2,196 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang=""> <!--<![endif]-->
+<head> 
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <title> </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css ">
 
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css ">
     <link rel="stylesheet" href="css/main.css">
-
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js "></script>
 </head>
 <body>
-    <!--[if lt IE 8]>
-                        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <style type="text/css">
-                .tasks {
-                font-size: large;
-                }
-                .focus {
-                font-size: larger;
-                background-color: grey;
-                }
-    </style>
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Hey all FME'ers!</h1>
-            <p>Quick tour of the FME Server REST API. The tour stops:</p>
-            <ol class="tasks">
-                <li>Query the FME Server REST API</li>
-                <li>List all published parameters with their options</li>
-                <li>Run a workspace and get the response</li>
-                <li>Send data to a workspace and forget about it</li>
-                <li>Run a workspace and ask how its feeling</li>
-            </ol>
-        </div>
-    </div>
+<!--[if lt IE 8]>
+                        <p class="
+browserupgrade ">You are using an <strong>outdated</strong> browser. Please <a href="
+http: //browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif] -->
+<style type = "text/css">
+    .tasks {
+        font-size: large;
+    }
+    .focus {
+        font-size: larger;
+        background-color: darkslategray;
+        color: whitesmoke;
+    }
+    li {
+        word-wrap: break-word;
+    } 
+</style>
 
-    <div class="container">
-        <!-- Example row of columns -->
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+<div class="container">
+<h1>Hey all FME'ers!</h1> <p> Quick tour of the FME Server REST API.The tour stops: </p>
+<ol class="tasks">
+    <li>Query the FME Server REST API</li> <ul> <li> In Chrome </li>
+    <li>With JQuery</li> <li> With FMEServer.js </li>
+    </ul> <li> List all published parameters with their options </li>
+    <li>Run a workspace and get the response</li> <li> Send data to a workspace and forget about it </li>
+    <li>Run a workspace and ask how its feeling</li> </ol>
+</div> </div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-12">
+            <h2>CORS and FME Server setup</h2> <ul> <li> Setup CORS with "allow everything template" </li>
+            <li><a href="Testing CORS
+            http://client.cors-api.appspot.com/client">Test-cors.org</a></li>
+            <li><a href="
+            http://enable-cors.org/">http://enable-cors.org/</a></li>
+            <li> <a href = "https://knowledge.safe.com/articles/How_To/Configure-FME-Server-services-to-use-Gmail">Setup email in FME(gmail example) </a>
+            </li> </ul>
+        </div> </div>
+
         <div class="row">
             <div class="col-md-12">
-              <h2>Resources</h2>
-              <ul>
-                <li><a href="http://docs.safe.com/fme/html/FME_REST/">http://docs.safe.com/fme/html/FME_REST/</a></li>
-                <li><a href="https://console.fmecloud.safe.com/api_documentation">FME Cloud</a></li>
-                <li><a href="http://playground.fmeserver.com/">http://playground.fmeserver.com/</a></li>
-                
-              </ul>
+                <h2>Query REST API with Chrome</h2>
+
+                <ul>
+                    <li>
+                        https://wt-demo-norkart.fmecloud.com/fmerest/repositories/
+                    </li>
+                    <li>
+                        https://wt-demo-norkart.fmecloud.com/fmerest/repositories.json
+                    </li>
+                    <li>
+                        https://wt-demo-norkart.fmecloud.com/fmerest/repositories/samples.json
+                    </li>
+                    <li>
+                        https://wt-demo-norkart.fmecloud.com/fmerest/repositories/samples/austinDownload/parameters.json
+                    </li>
+                    <li>
+                        https://wt-demo-norkart.fmecloud.com/fmedatadownload/samples/austinDownload.fmw
+                    </li>
+                    <li>
+                        https://wt-demo-norkart.fmecloud.com/fmedatadownload/Samples/austinDownload.fmw?THEMES=airports&COORDSYS=LL84&FORMAT_GENERIC=SHAPE&MINX=-100&MINY=25&MAXX=-90&MAXY=35&BBOX_COORDSYS=LL84&opt_showresult=false&opt_servicemode=async&opt_requesteremail=alexanno@gmail.com
+                    </li>
+                    <li>
+                        &opt_servicemode=async
+                    </li>
+                    <li>
+                        &opt_requesteremail=alexanno@gmail.com
+                    </li>
+                    <li>
+                        &opt_responseformat=json
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Query REST API with JQuery</h2> <p> Query using Norkart.runJQueryGet(Norkart.url) in console.Try the different url 's above. Use:
+                </p>
+                <p><i>Norkart.url</i>, <i>Norkart.runJQueryGet(Norkart.url)</i> and <i>Norkart.response</i></p>
+                <textarea id="jqueryresponse"></textarea>
+                <ul>
+                    <li type="i">Resources:</li>
+                    <li>
+                        <a href="https://api.jquery.com/jquery.get/">$.get()</a>
+                    </li>
+                    <li>
+                        <a href="https://api.jquery.com/jquery.post/">$.post()</a>
+                    </li>
+                    <li>
+                        <a href="https://api.jquery.com/jquery.ajax/">$.ajax()</a>
+                    </li>
+                    <li>
+                        &opt_responseformat=json
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <h2>1.</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <div class="col-md-12">
+                <h2>Query REST API with FMEServer.js</h2>
+                <p>Using FMEServer.js library to control FME dynamically</p>
+                <textarea id="fmeserverresponse"></textarea>
+                <div style="border:red 1px solid" id="fmeplayground"></div>
+                <ul>
+                    <li>
+                        init and get dynamic token<br>
+                        <i>Norkart.initFMEServer()</i> and <i>Norkart.getToken()</i>
+                    </li>
+                    <li>
+                        <i>Norkart.getParams()</i>
+                    </li>
+                    <li>
+                        <i>Norkart.buildForm()</i>
+                    </li>
+                    <li>
+                        <i>Norkart.download()</i>
+                    </li>
+                    <li>
+                        <i>Norkart.stream()</i><br>
+                        <i>Norkart.response[0].statuscode</i>
+                    </li>
+                </ul>
             </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Resources</h2>
+                <ul>
+                    <li>
+                        <a href="http://docs.safe.com/fme/html/FME_REST/">http://docs.safe.com/fme/html/FME_REST/</a>
+                    </li>
+                    <li><a href="http://playground.fmeserver.com/javascript-library/server-documentation/">FMEServer.js doc</a></li>
+                    <li><a href="https://wt-demo-norkart.fmecloud.com/fmerest/v2/apidoc/">FME REST API</a></li>
+                    <li>
+                        <a href="https://console.fmecloud.safe.com/api_documentation">FME Cloud</a>
+                    </li>
+                    <li><a href="http://playground.fmeserver.com/">http://playground.fmeserver.com/</a></li>
+                    <li>
+                        <a href="http://playground.fmeserver.com/javascript-code-samples">http://playground.fmeserver.com/javascript-code-samples</a>
+                    </li>
+                    <li><a href="https://wt-demo-norkart.fmecloud.com/fmetoken/">Token service</a></li>
+                    
+                </ul>
             </div>
         </div>
 
         <hr>
 
         <footer>
-            <p>&copy; Company 2015</p>
+            <p>&copy; Norkart 2015</p>
         </footer>
-        </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        </div> <!-- /container -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write(' <script src="js/vendor/jquery-1.11.2.min.js"> <\/script>')</script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"> </script>
+        <script src="js/vendor/spin.min.js "></script>
+        <script src="js/vendor/FMEServer.min.js "></script>
         <script type="text/javascript">
-                                $("document").ready(function() {
-                                    $(".tasks li").click(function() {
-                                    $(".tasks li").removeClass("focus");
-                                    $(this).toggleClass("focus");
-                                    });
-                                })
+            $("document").ready(function() {
+                console.log("asdf");
+                $("li").click(function() {
+                    $("li").removeClass("focus");
+                    $(this).toggleClass("focus");
+                });
+            });
         </script>
         <script src="js/main.js"></script>
     </body>
