@@ -20,7 +20,7 @@ $(document).ready(function() {
     /** FMEServer.js */
     Norkart.fmeserver = {};
     Norkart.fmeserver.init = false;
-    Norkart.fmeserver.token = "b2da6e4ebf9b855f19cfbd5a9a9869baf287321a";
+    Norkart.fmeserver.token = "b2da6e4ebf9b855f19cfbd5a9a9869baf287321a";//should not hardcode this in .js - hide it server-side
 
     Norkart.initFME = function() {
     	//check if FMEServer lib is initialized - if not: init.
@@ -32,10 +32,10 @@ $(document).ready(function() {
 	        Norkart.fmeserver.init = true;
     	}
     } 
- 
+    //custom generate token based on username+password
     Norkart.getToken = function() {
     	Norkart.initFME();
-        FMEServer.generateToken('superuser', 'BxuDyg8wkzh3ZKfR43D2', '7', 'days', function(responsedata) {
+        FMEServer.generateToken('superuser', "BxuDyg8wkzh3ZKfR43D2", '7', 'days', function(responsedata) {
             Norkart.response = responsedata;
             console.log(responsedata);
             $("#fmeserverresponse").html(JSON.stringify(responsedata, null, '\t'));
@@ -71,7 +71,7 @@ $(document).ready(function() {
     		"COORDSYS": "LL84",
     		"FORMAT_GENERIC": "PDF2D",
     		"opt_requesteremail": "alexanno@gmail.com",
-    		"opt_servicemode": "async"//sync vs async
+    		"opt_servicemode": "sync"//sync vs async
     	};
     	var queryString = $.param(parameters);//serialize to querystring
     	FMEServer.runDataDownload( "Samples", "austinDownload.fmw", queryString, function(responsedata) {

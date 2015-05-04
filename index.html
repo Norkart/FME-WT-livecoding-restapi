@@ -18,11 +18,7 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js "></script>
 </head>
 <body>
-<!--[if lt IE 8]>
-                        <p class="
-browserupgrade ">You are using an <strong>outdated</strong> browser. Please <a href="
-http: //browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif] -->
+<!--[if lt IE 8]><p class="browserupgrade ">You are using an <strong>outdated</strong> browser. Please <a href="http: //browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif] -->
 <style type = "text/css">
     .tasks {
         font-size: large;
@@ -42,11 +38,17 @@ http: //browsehappy.com/">upgrade your browser</a> to improve your experience.</
 <div class="container">
 <h1>Hey all FME'ers!</h1> <p> Quick tour of the FME Server REST API.The tour stops: </p>
 <ol class="tasks">
-    <li>Query the FME Server REST API</li> <ul> <li> In Chrome </li>
-    <li>With JQuery</li> <li> With FMEServer.js </li>
-    </ul> <li> List all published parameters with their options </li>
-    <li>Run a workspace and get the response</li> <li> Send data to a workspace and forget about it </li>
-    <li>Run a workspace and ask how its feeling</li> </ol>
+    <li>List all published parameters with their options</li>
+    <li>Build an HTML form dynamically</li>
+    <li>Use FME as a business logic web service</li> 
+    <li>Trigger data download</li>
+    <li>Using different approaches:</li> 
+        <ul> 
+        <li>In Chrome</li>
+        <li>With JQuery</li> 
+        <li>With FMEServer.js</li>
+        </ul> 
+    </ol>
 </div> </div>
 
 <div class="container">
@@ -73,6 +75,7 @@ http: //browsehappy.com/">upgrade your browser</a> to improve your experience.</
                     <li>
                         https://wt-demo-norkart.fmecloud.com/fmerest/repositories.json
                     </li>
+                    <li>V2:   https://wt-demo-norkart.fmecloud.com/fmerest/v2/repositories/?accept=json</li>
                     <li>
                         https://wt-demo-norkart.fmecloud.com/fmerest/repositories/samples.json
                     </li>
@@ -83,7 +86,7 @@ http: //browsehappy.com/">upgrade your browser</a> to improve your experience.</
                         https://wt-demo-norkart.fmecloud.com/fmedatadownload/samples/austinDownload.fmw
                     </li>
                     <li>
-                        https://wt-demo-norkart.fmecloud.com/fmedatadownload/Samples/austinDownload.fmw?THEMES=airports&COORDSYS=LL84&FORMAT_GENERIC=SHAPE&MINX=-100&MINY=25&MAXX=-90&MAXY=35&BBOX_COORDSYS=LL84&opt_showresult=false&opt_servicemode=async&opt_requesteremail=alexanno@gmail.com
+                        https://wt-demo-norkart.fmecloud.com/fmedatadownload/Samples/austinDownload.fmw?THEMES=airports&COORDSYS=LL84&FORMAT_GENERIC=SHAPE&MINX=-100&MINY=25&MAXX=-90&MAXY=35&BBOX_COORDSYS=LL84&opt_showresult=false&opt_requesteremail=alexanno@gmail.com&opt_servicemode=async
                     </li>
                     <li>
                         &opt_servicemode=async
@@ -186,7 +189,6 @@ http: //browsehappy.com/">upgrade your browser</a> to improve your experience.</
         <script src="js/vendor/FMEServer.min.js "></script>
         <script type="text/javascript">
             $("document").ready(function() {
-                console.log("asdf");
                 $("li").click(function() {
                     $("li").removeClass("focus");
                     $(this).toggleClass("focus");
