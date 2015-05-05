@@ -1,0 +1,524 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "/Applications/FME 2014/Engine/fme" /Users/alexanno/Documents/Workspaces/json_output.fmw
+#          --DestDataset_JSON ""
+#    
+#    
+#! PASSWORD=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="-417 0"
+#! SHOW_INFO_NODES="true"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! BEGIN_PYTHON=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! DESCRIPTION=""
+#! TITLE=""
+#! MAX_LOG_FEATURES="200"
+#! END_TCL=""
+#! FME_BUILD_NUM="14339"
+#! ZOOM_SCALE="100"
+#! CATEGORY=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! USAGE=""
+#! END_PYTHON=""
+#! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID=""
+#! DOC_TOP_LEFT="-162 -727"
+#! REQUIREMENTS_KEYWORD=""
+#! SOURCE_ROUTING_FILE=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESTINATION="NONE"
+#! LAST_SAVE_DATE="2015-05-03T21:51:20"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! WORKSPACE_VERSION="1"
+#! SOURCE="NONE"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP2 (20140623 - Build 14339 - macosx)"
+#! FME_SERVER_SERVICES=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! LOG_FILE=""
+#! REQUIREMENTS=""
+#! BEGIN_TCL=""
+#! DOC_EXTENTS="1181 284"
+#! FME_DOCUMENT_GUID="c55a7eca-f1cd-11e4-827c-ad4c3f71ae8b"
+#! SHOW_ANNOTATIONS="true"
+#! IGNORE_READER_FAILURE="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="JSON"
+#! DATASET="$(DestDataset_JSON)"
+#! KEYWORD="JSON_1"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="600"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_secondary_axis float fme_dataset string fme_fill_color string fme_text_string string fme_feature_type string fme_text_size float fme_start_angle float fme_rotation float fme_type string fme_geometry fme_char(50) fme_primary_axis float fme_sweep_angle float fme_basename string fme_color string"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14339"
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_DIRECTORY=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="application/json ADD_DISPOSITION"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="boolean"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_time"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_date"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int64"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="object"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="array"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="JSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="object_or_array"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="JSON"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_text"
+#! FME_TYPE="fme_text"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_ellipse"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_arc"
+#! FME_TYPE="fme_arc"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_rectangle"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_rounded_rectangle"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_raster"
+#! FME_TYPE="fme_raster"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_surface"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_solid"
+#! FORMAT="JSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="json_polygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="JSON"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="output"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="1019 -443"
+#! ORDER="5e+14"
+#! COLLAPSED="true"
+#! KEYWORD="JSON_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI FILENAME DestDataset_JSON JSON_Files(*.json)|*.json|All_Files|*.* Destination JSON (JavaScript Object Notation) File:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="Creator"
+#! VERSION="5"
+#! POSITION="-162 -458"
+#! ORDER="5e+14"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="CREATED"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="CRE_ATTR" PARM_VALUE="_creation_instance"/>
+#! <XFORM_PARM PARM_NAME="GEOM" PARM_VALUE="&lt;lt&gt;?xml&lt;space&gt;version=&lt;quote&gt;1.0&lt;quote&gt;&lt;space&gt;encoding=&lt;quote&gt;US_ASCII&lt;quote&gt;&lt;space&gt;standalone=&lt;quote&gt;no&lt;quote&gt;&lt;space&gt;?&lt;gt&gt;&lt;lt&gt;geometry&lt;gt&gt;&lt;lt&gt;null&lt;solidus&gt;&lt;gt&gt;&lt;lt&gt;&lt;solidus&gt;geometry&lt;gt&gt;"/>
+#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NUM" PARM_VALUE="1"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Creator"/>
+#! <XFORM_PARM PARM_NAME="COORDS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATEND" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GEOMTYPE" PARM_VALUE="Geometry Object"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="3"
+#! TYPE="AttributeCreator"
+#! VERSION="5"
+#! POSITION="549 -727"
+#! ORDER="5e+14"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="StatusCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="StatusText" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="StatusCode,1,StatusText,Everything&lt;space&gt;in&lt;space&gt;order"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="4"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="3"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="5"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE DestDataset_JSON_1,JSON_OUT_WRITE_FEATURE_TYPE_KEY_JSON_1,JSON_OUT_FEATURE_TYPE_KEY_JSON_1,JSON_OUT_WRITE_GEOMETRY_JSON_1,JSON_OUT_GEOMETRY_KEY_JSON_1,JSON_OUT_GEOMETRY_FORMAT_JSON_1,JSON_OUT_WRITE_COORDINATE_SYSTEM_JSON_1,JSON_OUT_COORDINATE_SYSTEM_KEY_JSON_1,JSON_OUT_COORDINATE_SYSTEM_FORMAT_JSON_1,JSON_OUT_WRITER_CHARSET_JSON_1,JSON_OUT_WRITE_BOM_JSON_1,JSON_OUT_JSONP_FUNC_NAME_JSON_1
+DEFAULT_MACRO DestDataset_JSON 
+GUI FILENAME DestDataset_JSON JSON_Files(*.json)|*.json|All_Files|*.* Destination JSON (JavaScript Object Notation) File:
+INCLUDE [ if {{$(DestDataset_JSON)} == {}} { puts_real {Parameter 'DestDataset_JSON' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE NULL
+READER_KEYWORD NULL_SOURCE
+NULL_SOURCE_DATASET null
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} JSON
+MULTI_WRITER_KEYWORD{0} JSON_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "JSON_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER JSON JSON_1
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_JSON_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER JSON JSON_1
+DEFAULT_MACRO DestDataset_JSON_1 $(DestDataset_JSON)
+GUI FILENAME DestDataset_JSON_1 JSON_Files(*.json)|*.json|All_Files|*.* Destination JSON (JavaScript Object Notation) File:
+DEFAULT_MACRO JSON_OUT_WRITE_FEATURE_TYPE_KEY_JSON_1 YES
+JSON_1_WRITE_FEATURE_TYPE_KEY "$(JSON_OUT_WRITE_FEATURE_TYPE_KEY_JSON_1)"
+GUI ACTIVEDISCLOSUREGROUP JSON_OUT_WRITE_FEATURE_TYPE_KEY_JSON_1 FEATURE_TYPE_KEY Write Feature Type Key
+DEFAULT_MACRO JSON_OUT_FEATURE_TYPE_KEY_JSON_1 json_featuretype
+JSON_1_FEATURE_TYPE_KEY "$(JSON_OUT_FEATURE_TYPE_KEY_JSON_1)"
+GUI TEXT JSON_OUT_FEATURE_TYPE_KEY_JSON_1 Feature Type Key Name:
+DEFAULT_MACRO JSON_OUT_WRITE_GEOMETRY_JSON_1 YES
+JSON_1_WRITE_GEOMETRY "$(JSON_OUT_WRITE_GEOMETRY_JSON_1)"
+GUI ACTIVEDISCLOSUREGROUP JSON_OUT_WRITE_GEOMETRY_JSON_1 GEOMETRY_KEY%GEOMETRY_FORMAT%WRITE_COORDINATE_SYSTEM Write Geometry
+DEFAULT_MACRO JSON_OUT_GEOMETRY_KEY_JSON_1 json_geometry
+JSON_1_GEOMETRY_KEY "$(JSON_OUT_GEOMETRY_KEY_JSON_1)"
+GUI TEXT JSON_OUT_GEOMETRY_KEY_JSON_1 Geometry Key Name:
+DEFAULT_MACRO JSON_OUT_GEOMETRY_FORMAT_JSON_1 GeoJSON
+JSON_1_GEOMETRY_FORMAT "$(JSON_OUT_GEOMETRY_FORMAT_JSON_1)"
+GUI CHOICE JSON_OUT_GEOMETRY_FORMAT_JSON_1 GeoJSON%OGC-WKT%None Geometry Format:
+DEFAULT_MACRO JSON_OUT_WRITE_COORDINATE_SYSTEM_JSON_1 YES
+JSON_1_WRITE_COORDINATE_SYSTEM "$(JSON_OUT_WRITE_COORDINATE_SYSTEM_JSON_1)"
+GUI ACTIVEDISCLOSUREGROUP JSON_OUT_WRITE_COORDINATE_SYSTEM_JSON_1 COORDINATE_SYSTEM_KEY%COORDINATE_SYSTEM_FORMAT Write Coordinate System
+DEFAULT_MACRO JSON_OUT_COORDINATE_SYSTEM_KEY_JSON_1 json_ogc_wkt_crs
+JSON_1_COORDINATE_SYSTEM_KEY "$(JSON_OUT_COORDINATE_SYSTEM_KEY_JSON_1)"
+GUI TEXT JSON_OUT_COORDINATE_SYSTEM_KEY_JSON_1 Coordinate System Key Name:
+DEFAULT_MACRO JSON_OUT_COORDINATE_SYSTEM_FORMAT_JSON_1 OGC-WKT
+JSON_1_COORDINATE_SYSTEM_FORMAT "$(JSON_OUT_COORDINATE_SYSTEM_FORMAT_JSON_1)"
+GUI CHOICE JSON_OUT_COORDINATE_SYSTEM_FORMAT_JSON_1 OGC-WKT%"Name only" Coordinate System Format:
+DEFAULT_MACRO JSON_OUT_WRITER_CHARSET_JSON_1 UTF-8
+JSON_1_WRITER_CHARSET "$(JSON_OUT_WRITER_CHARSET_JSON_1)"
+GUI CHOICE JSON_OUT_WRITER_CHARSET_JSON_1 UTF-8%UTF-16%UTF-16BE%UTF-16LE%UTF-32%UTF-32BE%UTF-32LE Output Character Set:
+DEFAULT_MACRO JSON_OUT_WRITE_BOM_JSON_1 No
+JSON_1_WRITE_BOM "$(JSON_OUT_WRITE_BOM_JSON_1)"
+GUI CHOICE JSON_OUT_WRITE_BOM_JSON_1 Yes%No Byte Order Marker:
+DEFAULT_MACRO JSON_OUT_JSONP_FUNC_NAME_JSON_1 
+JSON_1_JSONP_FUNC_NAME "$(JSON_OUT_JSONP_FUNC_NAME_JSON_1)"
+GUI OPTIONAL TEXT JSON_OUT_JSONP_FUNC_NAME_JSON_1 JSONP Function Name:
+JSON_1_DATASET "$(DestDataset_JSON_1)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)json_output.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_JSON_1 JSON_1
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME json_output
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+Tcl2 proc Creator_CoordSysRemover {} {   global FME_CoordSys;   set FME_CoordSys {}; }
+MACRO Creator_XML     NOT_ACTIVATED
+MACRO Creator_CLASSIC NOT_ACTIVATED
+MACRO Creator_2D3D    2D_GEOMETRY
+MACRO Creator_COORDS  <Unused>
+INCLUDE [ if { {Geometry Object} == {Geometry Object} } {            puts {MACRO Creator_XML *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Coordinate List} } {            puts {MACRO Creator_2D3D 2D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {3D Coordinate List} } {            puts {MACRO Creator_2D3D 3D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Min/Max Box} } {            set comment {                We need to turn the COORDS which are                    minX minY maxX maxY                into a full polygon list of coordinates            };            set splitCoords [split [string trim {<Unused>}]];            if { [llength $splitCoords] > 4} {               set trimmedCoords {};               foreach item $splitCoords { if { $item != {} } {lappend trimmedCoords $item} };               set splitCoords $trimmedCoords;            };            if { [llength $splitCoords] != 4 } {                error {Creator: Coordinate List MUST have four numbers - `<Unused>' is invalid};            };            set minX [lindex $splitCoords 0];            set minY [lindex $splitCoords 1];            set maxX [lindex $splitCoords 2];            set maxY [lindex $splitCoords 3];            puts "MACRO Creator_COORDS $minX $minY $minX $maxY $maxX $maxY $maxX $minY $minX $minY";            puts {MACRO Creator_2D3D 2D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+FACTORY_DEF $(Creator_XML) CreationFactory    FACTORY_NAME Creator_XML_Creator    CREATE_AT_END no    OUTPUT FEATURE_TYPE _____CREATED______        @Geometry(FROM_ENCODED_STRING,<lt>?xml<space>version=<quote>1.0<quote><space>encoding=<quote>US_ASCII<quote><space>standalone=<quote>no<quote><space>?<gt><lt>geometry<gt><lt>null<solidus><gt><lt><solidus>geometry<gt>)
+FACTORY_DEF $(Creator_CLASSIC) CreationFactory    FACTORY_NAME Creator_CLASSIC_Creator    $(Creator_2D3D) $(Creator_COORDS)    CREATE_AT_END no    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * TeeFactory    FACTORY_NAME Creator_Cloner    INPUT FEATURE_TYPE _____CREATED______    NUMBER_OF_COPIES 1    COPY_NUMBER_ATTRIBUTE "_creation_instance"    OUTPUT FEATURE_TYPE Creator_CREATED        @Tcl2(Creator_CoordSysRemover)        @CoordSys()        fme_feature_type Creator
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator ATTRSET_PROPAGATE_MISSING YES INPUT  FEATURE_TYPE Creator_CREATED ATTR StatusCode 1 ATTR StatusText Everything<space>in<space>order    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT 
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "AttributeCreator_OUTPUT -> output Correlator"    INPUT FEATURE_TYPE AttributeCreator_OUTPUT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,JSON)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,output)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+JSON_1_DEF output
