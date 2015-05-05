@@ -8,7 +8,7 @@ $(document).ready(function() {
     Norkart.runJQueryGet = function(url) {
         $.get(url, function(responsedata) {
             Norkart.response = responsedata;
-            console.log(responsedata);
+            //console.log(responsedata);
             $("#jqueryresponse").html(JSON.stringify(responsedata, null, '\t'));
         }).fail(function(jqXHR) {
             console.log("ERROR");
@@ -37,7 +37,7 @@ $(document).ready(function() {
     	Norkart.initFME();
         FMEServer.generateToken('superuser', "BxuDyg8wkzh3ZKfR43D2", '7', 'days', function(responsedata) {
             Norkart.response = responsedata;
-            console.log(responsedata);
+            //console.log(responsedata);
             $("#fmeserverresponse").html(JSON.stringify(responsedata, null, '\t'));
         });
     } 
@@ -46,7 +46,7 @@ $(document).ready(function() {
     	Norkart.initFME();
     	FMEServer.getWorkspaceParameters( "Samples", "austinDownload.fmw", function(responsedata) {
     		Norkart.response = responsedata;
-            console.log(responsedata);
+            //console.log(responsedata);
             $("#fmeserverresponse").html(JSON.stringify(responsedata, null, '\t'));
     	});
     }
@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     	console.log("fetching params")
     	FMEServer.getWorkspaceParameters( "Samples", "austinDownload.fmw", function(responsedata) {
-            console.log(responsedata);
+            //console.log(responsedata);
             $("#fmeserverresponse").html(JSON.stringify(responsedata, null, '\t'));
 
             console.log("finished fetching parameters - building form");
@@ -76,7 +76,7 @@ $(document).ready(function() {
     	var queryString = $.param(parameters);//serialize to querystring
     	FMEServer.runDataDownload( "Samples", "austinDownload.fmw", queryString, function(responsedata) {
     		Norkart.response = responsedata;
-            console.log(responsedata);
+            //console.log(responsedata);
             $("#fmeserverresponse").html(JSON.stringify(responsedata, null, '\t'));
     	});
     }
@@ -90,12 +90,44 @@ $(document).ready(function() {
 
     	FMEServer.runDataStreaming( "Samples", "json_output.fmw", queryString, function(responsedata) {
     		Norkart.response = responsedata;
-            console.log(responsedata);
+            //console.log(responsedata);
 
             alert(Norkart.response[0].statustext);
 
             $("#fmeserverresponse").html(JSON.stringify(responsedata, null, '\t'));
     	});
+    }
+
+
+    //Leaflet and FMEServer datastreaming
+    Norkart.map = function() {
+        Norkart.initFME();
+
+        Norkart.map = new WebatlasMap('map', {customer: 'WAPI_JS_V3_WikiDemo'});
+        Norkart.map.setView(new L.LatLng(59.92448055859924, 10.758276373601069),10);
+
+        FMEServer.runDataStreaming( "Samples", "json_output.fmw", "", function(responsedata) {
+            Norkart.response = responsedata[0];
+            if(Norkart.response.statuscode === 1) {
+                alert("Everything ok!");
+
+                //fetch geojson from FME using data streaming
+                var parameters = {
+                };
+                var queryString = $.param(parameters);//serialize to querystring
+                FMEServer.runDataStreaming( "Samples", "geojson_output.fmw", queryString, function(responsedata) {
+                    //console.log(responsedata);
+                    var geojsonFeature = responsedata;
+                    L.geoJson(geojsonFeature, {
+                        onEachFeature: function(feature, layer) {
+                            layer.bindPopup(feature.properties.data);
+                        }
+                    }).addTo(Norkart.map);
+                });
+            } else {
+                alert("Not ok....");
+            }
+        });
     }
 
 	Norkart.clear = function() {
