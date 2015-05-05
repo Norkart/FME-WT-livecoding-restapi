@@ -8,7 +8,7 @@ $(document).ready(function() {
     Norkart.runJQueryGet = function(url) {
         $.get(url, function(responsedata) {
             Norkart.response = responsedata;
-            //console.log(responsedata);
+            console.log(responsedata);
             $("#jqueryresponse").html(JSON.stringify(responsedata, null, '\t'));
         }).fail(function(jqXHR) {
             console.log("ERROR");
@@ -100,7 +100,7 @@ $(document).ready(function() {
 
 
     //Leaflet and FMEServer datastreaming
-    Norkart.map = function() {
+    Norkart.makeMap = function() {
         Norkart.initFME();
 
         Norkart.map = new WebatlasMap('map', {customer: 'WAPI_JS_V3_WikiDemo'});
